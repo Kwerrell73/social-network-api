@@ -1,13 +1,15 @@
-<h1 align="center"> Social Networking API 👋</h1>
+# Social Networking API 
+
+## Description
+
+🔍 API for a social network where users can share their thoughts, create a friend list, and react to other users thoughts.
   
-<p align="center">
-    <img src="https://img.shields.io/github/languages/top/jpd61/social-network-api"  />
-    <img src="https://img.shields.io/github/issues/Kwerrell73/social-network-api" />
-    <img src="https://img.shields.io/github/last-commit/Kwerrell73/social-network-api" >
-    <a href="https://github.com/Kwerrell73"><img src="https://img.shields.io/github/followers/Kwerrell73?style=social" target="_blank" /></a>
-   
-</p>
+## Walk-Thru video:
+https://drive.google.com/file/d/1-sClX_XSzxjUN0bqx11MJP5_2B15LFij/view*TBD
+
   
+## Built With
+
 <p align="center">
     <img src="https://img.shields.io/badge/javascript-yellow" />
     <img src="https://img.shields.io/badge/express-orange" />
@@ -16,13 +18,6 @@
     <img src="https://img.shields.io/badge/nodemon-green" />
 </p>
    
-## Description
-
-🔍 API for a social network where users can share their thoughts, create a friend list, and react to other users thoughts.
-  
-💻Walk-Thru video:
-  
-)
 
 ## User Story
 
@@ -49,6 +44,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ## Table of Contents
 - [Description](#description)
 - [User Story](#user-story)
+- [Walk-Thru video](#)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -77,7 +73,7 @@ With Nodemon:
 
 No current testing
 
-## Contributing
+## Contribution
 :rocket: [Kellie Werrell](https://github.com/Kwerrell73)
 
 ## Questions
