@@ -3,7 +3,7 @@
 const router = require('express').Router();
 
 // Set requirements 
-const {
+//const {
 //get all users
 //get users by id
 //create user
@@ -12,7 +12,7 @@ const {
 //add
 //unfriend
 
-} = require('/').get(getAllUsers).post
+//} = require('/').get(getAllUsers).post
 
 
 
