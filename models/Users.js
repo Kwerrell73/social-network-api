@@ -4,53 +4,47 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const PizzaSchema = new Schema(
-    {
-      pizzaName: {
-        type: String,
-        required: true,
-        trim: true
-      },
-      createdBy: {
-        type: String,
-        required: true,
-        trim: true
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (createdAtVal) => dateFormat(createdAtVal)
-      },
-      size: {
-        type: String,
-        required: true,
-        enum: ['Personal', 'Small', 'Medium', 'Large', 'Extra Large'],
-        default: 'Large'
-      },
-      toppings: [],
-      comments: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'Comment'
-        }
-      ]
+const userSchema = new Schema(
+  {
+    userName: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true
     },
-    {
-      toJSON: {
-        virtuals: true,
-        getters: true
-      },
-      id: false
-    }
-  );
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      // use REGEX to validate correct email
+      match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
+    },
 
-// get total count of comments and replies on retrieval
-PizzaSchema.virtual('commentCount').get(function() {
-  return this.comments.reduce((total, comment) => total + comment.replies.length + 1, 0);
-});
+    thoughts: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Thoughts'
+    }],
+    friends: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Users'
+    }]
+  },
+  {
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+    id: false
+  }
+)
 
-// create the Pizza model using the PizzaSchema
-const Pizza = model('Pizza', PizzaSchema);
+// get total count of friends
+UsersSchema.virtual('friendCount').get(function () {
+  return this.friends.length;
+})
 
-// export the Pizza model
-module.exports = Pizza;
+// create the Users model using the Users Schema
+const Users = model('Users', UsersSchema);
+
+// Export Users module
+module.exports = Users;
