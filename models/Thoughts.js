@@ -42,7 +42,7 @@ const ThoughtSchema = new Schema(
       required: true,
       trim: true,
       minlength: 1,
-      maxlength: 299
+      maxlength: 280
 
     },
     createdAt: {
