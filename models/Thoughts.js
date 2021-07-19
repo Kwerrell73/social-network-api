@@ -33,23 +33,25 @@ const ReactionSchema = new Schema(
 
 const ThoughtSchema = new Schema(
   {
-    username: {
-      type: String,
-      required: true
-    },
-    thoughtBody: {
+    thoughtId: {
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId()
+  },
+    thoughtText: {
       type: String,
       required: true,
-      trim: true,
-      minlength: 1,
-      maxlength: 280
-
+      maxlength: 280,
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: createdAtVal => dateFormat(createdAtVal)
+      get: (createdAtVal) => dateFormat(createdAtVal),
     },
+    username: {
+      type: String,
+      required: true,
+    },
+ 
     // use ReactionSchema to validate data for a reply
     reaction: [ReactionSchema]
   },

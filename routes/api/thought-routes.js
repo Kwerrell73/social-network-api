@@ -15,7 +15,7 @@ const {
 } = require('../../controllers/thought-controller');
 
 
-// Get all thought
+// Get all thoughts
 router
     .route('/')
     .get(getAllThoughts);
