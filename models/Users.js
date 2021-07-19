@@ -4,7 +4,7 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const userSchema = new Schema(
+const UserSchema = new Schema(
   {
     userName: {
       type: String,
@@ -16,8 +16,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      // use REGEX to validate correct email
-      match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
+      match: [/.+@.+\..+/, 'Must match an email address!'],
     },
 
     thoughts: [{
@@ -39,12 +38,12 @@ const userSchema = new Schema(
 )
 
 // get total count of friends
-UsersSchema.virtual('friendCount').get(function () {
+UserSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 })
 
 // create the Users model using the Users Schema
-const Users = model('Users', UsersSchema);
+const Users = model('Users', UserSchema);
 
 // Export Users module
 module.exports = Users;

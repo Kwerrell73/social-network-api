@@ -86,7 +86,7 @@ deleteThoughts({ params }, res) {
 
 
       //add reaction
-      addReation({ params, body }, res) {
+      addReaction({ params, body }, res) {
       Thoughts.findOneAndUpdate(
           { _id: params.thoughtId },
           { $push: { reactions: body } },

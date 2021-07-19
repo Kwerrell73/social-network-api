@@ -63,11 +63,11 @@ const ThoughtSchema = new Schema(
 );
 
 // get total count of comments and replies on retrieval
-ThoughtsSchema.virtual('replyCount').get(function() {
+ThoughtSchema.virtual('replyCount').get(function() {
   return this.reactions.length;
 });
 
 // create the Thoughts model using the Thoughts Schema
-const Thoughts = model('Thoughts', ThoughtsSchema);
+const Thoughts = model('Thoughts', ThoughtSchema);
 
-module.exports = Comment;
+module.exports = Thoughts;

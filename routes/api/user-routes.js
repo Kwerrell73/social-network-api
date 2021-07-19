@@ -10,9 +10,9 @@ const {
     updateUsers,
     deleteUsers,
     addFriend,
-    deleteFriend,
+    deleteFriend
 
-} = require('/').get(getAllUsers).post
+} = require('../../controllers/users-controller');
 
 
 // Set up GET all and POST at /api/users
