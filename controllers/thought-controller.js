@@ -96,7 +96,7 @@ deleteThoughts({ params }, res) {
         .select('-__v')
         .then(dbThoughtsData => {
         if (!dbThoughtsData) {
-            res.status(404).json({message: 'No thoughts with this particular ID!'});
+            res.status(404).json({message: 'No thoughts found with this particular ID!'});
             return;
         }
         res.json(dbThoughtsData);
@@ -113,7 +113,7 @@ deleteThoughts({ params }, res) {
           )
              .then(dbThoughtsData => {
         if (!dbThoughtsData) {
-            res.status(404).json({message: 'No thoughts with this particular ID!'});
+            res.status(404).json({message: 'No thoughts found with this particular ID!'});
             return;
         }
         res.json(dbThoughtsData);
