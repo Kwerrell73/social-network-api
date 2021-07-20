@@ -16,7 +16,7 @@ const ReactionSchema = new Schema(
       maxlength: 280
 
     },
-    username: {
+    userName: {
       type: String,
       required: true
     },
@@ -49,7 +49,7 @@ const ThoughtSchema = new Schema(
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    username: {
+    userName: {
       type: String,
       required: true,
     },
@@ -68,7 +68,7 @@ const ThoughtSchema = new Schema(
 
 // get total count of comments and replies on retrieval
 ThoughtSchema.virtual('replyCount').get(function() {
-  return this.reactions.length;
+  return this.reaction.length;
 });
 
 // create the Thoughts model using the Thoughts Schema

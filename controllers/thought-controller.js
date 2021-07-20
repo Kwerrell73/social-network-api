@@ -5,7 +5,7 @@ const thoughtsController = {
 
     //new thought
     createThoughts({ params, body }, res) {
-        //console.log(body);
+        console.log(body);
        Thoughts.create(body)
           .then(({ _id }) => {
             return Users.findOneAndUpdate(
