@@ -93,7 +93,7 @@ const thoughtsController = {
       { $addToSet: { reaction: body } },
       { new: true, runValidators: true }
     )
-     
+
       .then(dbReactionData => {
         if (!dbReactionData) {
           res.status(404).json({ message: 'No thoughts found with this particular ID!' });
@@ -105,11 +105,19 @@ const thoughtsController = {
 
   },
   //remove reaction
+  //   //db.demo541.update({ _id: ObjectId("5e8ca845ef4dcbee04fbbc11") },
+  // ...    { $pull: { 'software.services': "yahoo" }}
+  // ... );
+  // db.survey.update(
+  //   { },
+  //   { $pull: { results: { answers: { $elemMatch: { q: 2, a: { $gte: 8 } } } } } },
+  //   { multi: true }
+  // )
   deleteReaction({ params }, res) {
-    Thoughts.findOneAndDelete(
-      { reactionId: params.thoughtId },
-      { $pull: { reaction: body } },
-      { new: true }
+    Thoughts.Update(
+      {},
+      { $pull: { reaction: {$elemMatch: { thoughtId : params.reactionId }} } },
+      { multi: true }
     )
       .then(dbReactionData => {
         if (!dbReactionData) {
