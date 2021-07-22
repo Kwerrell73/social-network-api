@@ -4,20 +4,17 @@
 ## Description
 🔍 API for a social network where users can share their thoughts, create a friend list, and react to other users thoughts.
 
-<br>
-  
-## Walk-Thru video:
-https://drive.google.com/file/d/1-sClX_XSzxjUN0bqx11MJP5_2B15LFij/view*TBD
-
-<br>
+<br>   
 
 ## Built With
 <p>
     <img src="https://img.shields.io/badge/javascript-yellow" />
+    <img src="https://img.shields.io/badge/node-green" />
     <img src="https://img.shields.io/badge/express-orange" />
     <img src="https://img.shields.io/badge/MongoDB-blue"  />
     <img src="https://img.shields.io/badge/mongoose-red"  />
-    <img src="https://img.shields.io/badge/nodemon-green" />
+    <img src="https://img.shields.io/badge/insomnia-blueviolet"  />
+   
 </p>
    
 <br>   
@@ -27,6 +24,11 @@ AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 
+
+<br>
+  
+## Walk-Thru video:
+https://drive.google.com/file/d/1-sClX_XSzxjUN0bqx11MJP5_2B15LFij/view*TBD
 
 <br>
 
@@ -62,22 +64,22 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 <br>
 
 ## Installation
-💾   
   
-`npm init`
-
-`npm install`
+ * Step 1: Clone this repo. 
+ * Step 2: Install the following dependencies.
+ * Quick Install Links:
+ * MongoDB [here](https://docs.mongodb.com/manual/installation)
+ * Node [here](https://nodejs.org/en/download/) 
+ * Mongoose [here](https://mongoosejs.com/docs/)
+ * Express [here](https://expressjs.com/en/starter/installing.html)
 
 <br>
 
 ## Usage
 💻   
-  
-`npm start`
+  * To start application:   
+       `npm start`
 
-With Nodemon:
-
-`npm run watch`
 
 <br>
 

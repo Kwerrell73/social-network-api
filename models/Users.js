@@ -1,9 +1,9 @@
-///***Notes change over to users model
 
 //import mongoose dependencies
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
+//User Schema
 const UserSchema = new Schema(
   {
     userName: {
