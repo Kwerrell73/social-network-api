@@ -28,7 +28,13 @@ SO THAT my website can handle large amounts of unstructured data
 <br>
   
 ## Walk-Thru video:
-https://drive.google.com/file/d/1-sClX_XSzxjUN0bqx11MJP5_2B15LFij/view*TBD
+### User Routes
+https://drive.google.com/file/d/1N2HdtTD71m_lEnFJJ8dD1E7w2DjxCKxa/view
+
+<br>
+
+### Thought Routes
+https://drive.google.com/file/d/1leLui-6Uv2-dNLojlS2BXAuE4J3kSGm4/view
 
 <br>
 
