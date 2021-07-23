@@ -105,15 +105,7 @@ const thoughtsController = {
 
   },
   //remove reaction
-  //   //db.demo541.update({ _id: ObjectId("5e8ca845ef4dcbee04fbbc11") },
-  // ...    { $pull: { 'software.services': "yahoo" }}
-  // ... );
-  // db.survey.update(
-  //   { },
-  //   { $pull: { results: { answers: { $elemMatch: { q: 2, a: { $gte: 8 } } } } } },
-  //   { multi: true }
-  // )
-  deleteReaction({ params }, res) {
+   deleteReaction({ params }, res) {
     Thoughts.findOneAndUpdate(
       {_id: params.thoughtId},
       { $pull: { reaction: { reactionId : params.reactionId } } },
